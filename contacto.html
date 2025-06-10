@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Robótica Arduino</title>
+    <link rel="stylesheet" href="../estilos/menu.css"> <link rel="stylesheet" href="../estilos/contacto.css"> <link rel="icon" href="../imagenes/iconos/robot_icon.svg"> <link rel="stylesheet" href="../estilos/cargar.css">
+</head>
+<body>
+    <div id="loading-overlay">
+        <div class="wrapper">
+            <div class="space">
+                <div class="loading"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="navbar">
+        <figure class="logo">
+            <a href="../pagina web/index.html"> 
+                <img src="../imagenes/iconos/robot_icon.svg" alt="Icono de robot" />
+            </a>
+        </figure>
+        <nav class="nav-links">
+            <a href="../pagina web/proyectos.html">Proyectos</a>
+            <a href="../pagina web/tienda.html">Tienda</a>
+            <a href="../pagina web/contacto.html">Contacto</a> 
+            <a href="../pagina web/inicio.html" class="btn-navbar">Inicio</a>
+        </nav>
+    </header>
+
+    <main class="main-content-contacto">
+        <section class="contact-hero">
+            <h1>¡Ponte en contacto con nosotros!</h1>
+            <p>Estamos aquí para responder tus preguntas y ayudarte a empezar en el mundo de la robótica.</p>
+        </section>
+
+        <section class="contact-info-form">
+            <div class="contact-details">
+                <h2 class="Contacto">Información de Contacto</h2>
+                <p>¿Tienes alguna pregunta o te interesa alguno de nuestros kits?</p>
+                <p><strong>Email:</strong> <a href="mailto:info@mirobotarduino.com">info@mirobotarduino.com</a></p>
+                <p><strong>Teléfono:</strong> +1 555-123-4567</p>
+                <p><strong>Horario:</strong> Lunes a Viernes, 9 AM - 5 PM (GMT-3)</p>
+                <div class="social-links">
+                    <a href="https://facebook.com/tu_pagina" target="_blank" aria-label="Facebook"><img src="../imagenes/iconos/Facebook.png" alt="Facebook" width="30"></a>
+                    <a href="https://instagram.com/tu_pagina" target="_blank" aria-label="Instagram"><img src="../imagenes/iconos/instagram.png" alt="Instagram" width="30"></a>
+                    </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h2>Envíanos un mensaje</h2>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h3 class="Contacto">Robótica Arduino</h3>
+        <p>Copyright © 2025. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="../estilos/cargar.js"></script>
+
+</body>
+</html>

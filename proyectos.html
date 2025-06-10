@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/proyectos.css">
+    <link rel="icon" href="../imagenes/iconos/brazo_robotico.svg">
+    <title>Proyectos de Robótica</title>
+
+    <link rel="stylesheet" href="../estilos/cargar.css">
+    
+</head>
+
+<body>
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="../pagina web/index.html"> <img src="../imagenes/iconos/robot_icon.svg" alt="Logo Robot" width="40">
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="../pagina web/proyectos.html">Proyectos</a>
+            <a href="../pagina web/tienda.html">Tienda</a>
+            <a href="../pagina web/contacto.html">Contacto</a> 
+            <a href="../pagina web/inicio.html" class="btn-navbar">Inicio</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <h1 class="main-title">Nuestros Proyectos de Robots Arduino</h1>
+        <section class="projects-grid">
+            <div class="project-card" onclick="toggleDetails(this)">
+                <div class="project-header">
+                    <img src="../imagenes/Robot Seguidor.jpg" alt="Robot Seguidor de Línea" class="project-image">
+                    <h2 class="project-title">Robot Seguidor de Línea</h2>
+                    <p class="project-intro">Un robot inteligente diseñado para seguir una línea marcada en el suelo.</p>
+                </div>
+                <div class="project-details">
+                    <p>Ideal para aprender sobre sensores infrarrojos y control de motores. Este robot utiliza sensores para detectar la línea y ajustar su movimiento para permanecer sobre ella. Es un excelente proyecto para iniciarse en la robótica móvil.</p>
+                    <a href="#" class="project-link">Ver más detalles</a> 
+                </div>
+            </div>
+
+            <div class="project-card" onclick="toggleDetails(this)">
+                <div class="project-header">
+                    <img src="../imagenes/Robot Sumo.jpeg" alt="Robot de Lucha Sumo" class="project-image">
+                    <h2 class="project-title">Robot de Lucha Sumo</h2>
+                    <p class="project-intro">Un robot robusto construido para competir en un ring de sumo.</p>
+                </div>
+                <div class="project-details">
+                    <p>Intenta empujar a su oponente fuera del área. Equipado con sensores para detectar al oponente y potentes motores para el empuje, este robot pone a prueba estrategias de diseño y programación.</p>
+                    <a href="#" class="project-link">Ver más detalles</a> 
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+    <script>
+        function toggleDetails(card) {
+            card.classList.toggle('expanded');
+        }
+    </script>
+    
+    <script src="../estilos/cargar.js"></script>
+
+</body>
+</html>

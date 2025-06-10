@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Página</title>
+    <link rel="stylesheet" href="../estilos/proyectos.css"> <link rel="stylesheet" href="../estilos/loading-animation.css"> </head>
+<body>
+
+    <div id="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <header class="navbar">
+        </header>
+    <main class="main-content">
+        </main>
+    <footer>
+        </footer>
+
+    <script>
+        // JavaScript para mostrar la animación al salir de la página
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Oculta el overlay cuando la página está completamente cargada
+            const loadingOverlay = document.getElementById('loading-overlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.opacity = '0';
+                loadingOverlay.style.visibility = 'hidden';
+            }
+
+            // Muestra el overlay cuando se hace clic en un enlace (navegación a otra página)
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                if (link.href && link.href.startsWith(window.location.origin) && link.href !== window.location.href && !link.classList.contains('no-loader')) {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault(); // Previene la navegación inmediata
+                        if (loadingOverlay) {
+                            loadingOverlay.style.opacity = '1';
+                            loadingOverlay.style.visibility = 'visible';
+                        }
+                        // Pequeño retraso para que la animación se vea antes de navegar
+                        setTimeout(() => {
+                            window.location.href = link.href;
+                        }, 300); // 300ms de retraso, ajusta si quieres más o menos
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
